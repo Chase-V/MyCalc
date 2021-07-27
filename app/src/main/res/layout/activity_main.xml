@@ -18,10 +18,32 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/_0"
+        android:text=""
+        android:textDirection="rtl"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewOperationHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textDirection="rtl"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonAC"
-        android:layout_width="101dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/ac"
         android:textColor="@color/teal_700"
         android:textSize="@dimen/buttonTextSize"
@@ -33,8 +55,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonDelete"
-        android:layout_width="102dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_delete"
         android:textColor="@color/teal_700"
         android:textSize="@dimen/buttonTextSize"
@@ -46,8 +68,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonPercent"
-        android:layout_width="101dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_percent"
         android:textColor="@color/teal_700"
         android:textSize="@dimen/buttonTextSize"
@@ -59,8 +81,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonDivide"
-        android:layout_width="102dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_divide"
         android:textColor="@color/teal_700"
         android:textSize="@dimen/buttonTextSize"
@@ -73,8 +95,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
-        android:layout_width="102dp"
-        android:layout_height="73dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_2"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button0"
@@ -85,8 +107,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button7"
-        android:layout_width="101dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_7"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button4"
@@ -97,8 +119,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonMinus"
-        android:layout_width="102dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_minus"
         android:textColor="@color/teal_700"
         android:textSize="@dimen/buttonTextSize"
@@ -110,8 +132,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button9"
-        android:layout_width="101dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_9"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button6"
@@ -122,8 +144,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonMultiply"
-        android:layout_width="102dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/x"
         android:textColor="@color/teal_700"
         android:textSize="@dimen/buttonTextSize"
@@ -135,8 +157,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button1"
-        android:layout_width="101dp"
-        android:layout_height="73dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_1"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button0"
@@ -147,8 +169,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button5"
-        android:layout_width="102dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_5"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button2"
@@ -159,8 +181,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button6"
-        android:layout_width="101dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_6"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button3"
@@ -171,8 +193,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonPlus"
-        android:layout_width="102dp"
-        android:layout_height="73dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_plus"
         android:textColor="@color/teal_700"
         android:textSize="@dimen/buttonTextSize"
@@ -184,8 +206,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button8"
-        android:layout_width="102dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_8"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button5"
@@ -196,8 +218,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
-        android:layout_width="101dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_4"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button1"
@@ -208,8 +230,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button3"
-        android:layout_width="101dp"
-        android:layout_height="73dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_3"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/buttonDot"
@@ -220,8 +242,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button0"
-        android:layout_width="202dp"
-        android:layout_height="59dp"
+        android:layout_width="204dp"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_0"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -232,8 +254,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonDot"
-        android:layout_width="101dp"
-        android:layout_height="59dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_dot"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -244,8 +266,8 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonEquals"
-        android:layout_width="101dp"
-        android:layout_height="59dp"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
         android:text="@string/_equals"
         android:textColor="@color/teal_700"
         android:textSize="@dimen/buttonTextSize"
@@ -254,25 +276,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonDot"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="bottom"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="709dp" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint=""
-        android:text=""
-        android:textDirection="rtl"
-        android:textSize="@dimen/textSize"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        tools:layout_editor_absoluteX="5dp" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
