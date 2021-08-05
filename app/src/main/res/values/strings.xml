@@ -19,4 +19,5 @@
     <string name="_dot">.</string>
     <string name="_equals">=</string>
     <string name="_minus">-</string>
+    <string name="_negative">+/-</string>
 </resources>

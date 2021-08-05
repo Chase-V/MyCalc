@@ -53,20 +53,20 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
 
-    <!--    <androidx.appcompat.widget.AppCompatTextView-->
-    <!--        android:id="@+id/textViewCurrentNums"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="0dp"-->
-    <!--        android:hint="@string/_0"-->
-    <!--        android:text=""-->
-    <!--        android:textAlignment="textEnd"-->
-    <!--        android:textSize="@dimen/textSize"-->
-    <!--        app:layout_constraintBottom_toTopOf="@+id/guideline7"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/guideline3"-->
-    <!--        app:layout_constraintHorizontal_bias="1"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="@+id/guideline4"-->
-    <!--        app:layout_constraintVertical_bias="1" />-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewCurrentNums"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/_0"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="1" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textViewOperationHistory"
@@ -88,11 +88,10 @@
         android:text="@string/_0"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintEnd_toEndOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@id/buttonDot"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintStart_toEndOf="@+id/buttonNegative"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button1"
@@ -172,7 +171,7 @@
         android:layout_height="0dp"
         android:text="@string/_7"
         android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNegative"
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textViewCurrentNums"
@@ -307,6 +306,19 @@
         app:layout_constraintTop_toBottomOf="@+id/button9" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonNegative"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/_negative"
+        android:textColor="@color/teal_700"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/button0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonEquals"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -318,22 +330,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonDot"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
-
-    <EditText
-        android:id="@+id/textViewCurrentNums"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autofillHints="phone"
-        android:ems="10"
-        android:hint="@string/_0"
-        android:inputType="numberDecimal"
-        android:textAlignment="textEnd"
-        app:layout_constraintBottom_toTopOf="@+id/guideline7"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="1" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
