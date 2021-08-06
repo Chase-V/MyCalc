@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@color/liteGray"
     android:paddingStart="5dp"
     android:paddingEnd="5dp"
     android:paddingBottom="5dp"
@@ -12,316 +12,386 @@
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guidelineTopBorderOfNumbers"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeftBorder"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/buttonHeight"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRightBorder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottomBorder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBetweenTextViews"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textViewCurrentNums"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/buttonWidth"
         android:layout_height="wrap_content"
-        android:hint="@string/_0"
+        android:hint="@string/button0"
         android:text=""
         android:textAlignment="textEnd"
-        android:textSize="@dimen/textSize"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        android:textSize="@dimen/textViewTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineTopBorderOfNumbers"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRightBorder"
         app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeftBorder"
+        app:layout_constraintTop_toTopOf="@+id/guidelineBetweenTextViews"
         app:layout_constraintVertical_bias="1" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textViewOperationHistory"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/buttonWidth"
         android:layout_height="wrap_content"
         android:textAlignment="textEnd"
-        android:textSize="@dimen/textSize"
-        app:layout_constraintBottom_toTopOf="@+id/guideline12"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        android:textSize="@dimen/textViewTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBetweenTextViews"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRightBorder"
         app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeftBorder"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonAC"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/ac"
-        android:textColor="@color/teal_700"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button0"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button0"
+        android:textColor="@color/black"
         android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDot"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintStart_toEndOf="@+id/buttonNegative"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonDelete"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_delete"
-        android:textColor="@color/teal_700"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button1"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button1"
+        android:textColor="@color/black"
         android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintEnd_toStartOf="@+id/buttonPercent"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNegative"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonAC"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonPercent"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_percent"
-        android:textColor="@color/teal_700"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonDelete"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCurrentNums" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonDivide"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_divide"
-        android:textColor="@color/teal_700"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMultiply"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonPercent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
-
-
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_2"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button2"
+        android:textColor="@color/black"
         android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/button0"
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_7"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAC" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonMinus"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_minus"
-        android:textColor="@color/teal_700"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPlus"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_9"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMultiply"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPercent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonMultiply"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/x"
-        android:textColor="@color/teal_700"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/buttonMinus"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_1"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/buttonNegative"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_5"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_6"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonPlus"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_plus"
-        android:textColor="@color/teal_700"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEquals"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_8"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toStartOf="@+id/button9"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDelete" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_4"
-        android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
-
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_3"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button3"
+        android:textColor="@color/black"
         android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonDot"
         app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/button6" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button0"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_0"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button4"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button4"
+        android:textColor="@color/black"
         android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDot"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonNegative"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonDot"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_dot"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button5"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button5"
+        android:textColor="@color/black"
         android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button6"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button6"
+        android:textColor="@color/black"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button7"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button7"
+        android:textColor="@color/black"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAC" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button8"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button8"
+        android:textColor="@color/black"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/button9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDelete" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button9"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/button9"
+        android:textColor="@color/black"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMultiply"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPercent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAC"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonAC"
+        android:textColor="@color/juicyPeach"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopBorderOfNumbers" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDelete"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonDelete"
+        android:textColor="@color/juicyPeach"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPercent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonAC"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopBorderOfNumbers" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPercent"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonPercent"
+        android:textColor="@color/juicyPeach"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonDelete"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrentNums" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDivide"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonDivide"
+        android:textColor="@color/juicyPeach"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMultiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonPercent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTopBorderOfNumbers" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonMinus"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonMinus"
+        android:textColor="@color/juicyPeach"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonMultiply"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonMultiply"
+        android:textColor="@color/juicyPeach"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMinus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPlus"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonPlus"
+        android:textColor="@color/juicyPeach"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEquals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDot"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonDot"
+        android:textColor="@color/black"
+        android:textSize="@dimen/buttonTextSize"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonEquals"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button0"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonNegative"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_negative"
-        android:textColor="@color/teal_700"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonNegative"
+        android:textColor="@color/juicyPeach"
         android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button0"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonEquals"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="@string/_equals"
-        android:textColor="@color/teal_700"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/buttonEquals"
+        android:textColor="@color/juicyPeach"
         android:textSize="@dimen/buttonTextSize"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonDot"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.02" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.98" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.98" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline12"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

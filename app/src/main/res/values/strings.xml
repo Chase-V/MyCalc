@@ -1,23 +1,23 @@
 <resources>
     <string name="app_name">MyCalculator</string>
-    <string name="_0">0</string>
-    <string name="_8">8</string>
-    <string name="_7">7</string>
-    <string name="_9">9</string>
-    <string name="_6">6</string>
-    <string name="_5">5</string>
-    <string name="_4">4</string>
-    <string name="x">x</string>
-    <string name="_plus">+</string>
-    <string name="_3">3</string>
-    <string name="_2">2</string>
-    <string name="_1">1</string>
-    <string name="ac">AC</string>
-    <string name="_delete"><![CDATA[<-]]></string>
-    <string name="_percent">%</string>
-    <string name="_divide">/</string>
-    <string name="_dot">.</string>
-    <string name="_equals">=</string>
-    <string name="_minus">-</string>
-    <string name="_negative">+/-</string>
+    <string name="button0">0</string>
+    <string name="button8">8</string>
+    <string name="button7">7</string>
+    <string name="button9">9</string>
+    <string name="button6">6</string>
+    <string name="button5">5</string>
+    <string name="button4">4</string>
+    <string name="buttonMultiply">x</string>
+    <string name="buttonPlus">+</string>
+    <string name="button3">3</string>
+    <string name="button2">2</string>
+    <string name="button1">1</string>
+    <string name="buttonAC">AC</string>
+    <string name="buttonDelete"><![CDATA[<-]]></string>
+    <string name="buttonPercent">%</string>
+    <string name="buttonDivide">/</string>
+    <string name="buttonDot">.</string>
+    <string name="buttonEquals">=</string>
+    <string name="buttonMinus">-</string>
+    <string name="buttonNegative">+/-</string>
 </resources>
