@@ -1,12 +1,14 @@
 package com.example.mycalculator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,9 +33,11 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private void initRadio() {
         RadioButton radioDay = findViewById(R.id.radioLight);
         RadioButton radioNight = findViewById(R.id.radioDark);
+        Button buttonReturn = findViewById(R.id.buttonReturn);
 
         radioDay.setOnClickListener(this);
         radioNight.setOnClickListener(this);
+        buttonReturn.setOnClickListener(this);
 
         switch (getCurrentTheme()) {
             case 1:
@@ -54,6 +58,12 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             case R.id.radioDark:
                 setCurrentTheme(nightTheme);
                 break;
+            case R.id.buttonReturn:
+                Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
+                String theme = currentTheme.toString();
+                intent.putExtra(MainActivity.currentThemeKey, String.valueOf(currentTheme));
+                setResult(RESULT_OK, intent);
+                finish();
         }
         recreate();
     }

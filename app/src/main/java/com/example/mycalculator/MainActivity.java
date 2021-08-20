@@ -2,8 +2,6 @@ package com.example.mycalculator;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final String Val1Key = "Val1";
     private final String Val2Key = "Val2";
     private final String CurrentActionKey = "CurrentAction";
-    private final int Req_code = 1;
     private Button button0;
     private Button button1;
     private Button button2;
@@ -57,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private double valueTwo;
     private DecimalFormat decimalFormat;
     private char currentAction;
-    private String currentTheme;
+    static final String currentThemeKey = "CurrentTheme";
+    private final int Req_code = 1;
 
     @SuppressLint("NewApi")
     @Override
@@ -229,6 +227,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == Req_code) {
+            recreate();
+        }
     }
 
     private void initListeners() {
