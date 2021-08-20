@@ -1,12 +1,18 @@
 package com.example.mycalculator;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.text.DecimalFormat;
 
@@ -23,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final String Val1Key = "Val1";
     private final String Val2Key = "Val2";
     private final String CurrentActionKey = "CurrentAction";
+    private final int Req_code = 1;
     private Button button0;
     private Button button1;
     private Button button2;
@@ -43,14 +50,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonEquals;
     private Button buttonDot;
     private Button buttonNegative;
+    private Button buttonSettings;
     private TextView currentNumbers;
     private TextView historyNumbers;
     private double valueOne = Double.NaN;
     private double valueTwo;
     private DecimalFormat decimalFormat;
     private char currentAction;
+    private String currentTheme;
 
-
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -58,11 +67,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         super.onCreate(savedInstanceState);
 
+        setTheme(SettingsActivity.currentTheme);
+
         setContentView(R.layout.activity_main);
 
         initViews();
 
         initListeners();
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
     }
 
@@ -202,10 +216,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 } else break;
 
+            case R.id.buttonSettings:
+                Intent i = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivityForResult(i, Req_code);
+
             default:
                 break;
         }
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void initListeners() {
@@ -229,6 +252,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonNegative.setOnClickListener(this);
         buttonEquals.setOnClickListener(this);
         buttonDot.setOnClickListener(this);
+        buttonSettings.setOnClickListener(this);
     }
 
     private void initViews() {
@@ -254,6 +278,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonNegative = findViewById(R.id.buttonNegative);
         currentNumbers = findViewById(R.id.textViewCurrentNums);
         historyNumbers = findViewById(R.id.textViewOperationHistory);
+        buttonSettings = findViewById(R.id.buttonSettings);
     }
 
     private void computeCalculation() {
@@ -278,4 +303,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
+
 }
